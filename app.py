@@ -269,6 +269,67 @@ The SQL database has the following schema:
 # Streamlit app layout
 st.set_page_config(page_title="Chinook Database Explorer & Chatbot", layout="wide")
 
+# Custom CSS for dark theme
+st.markdown("""
+    <style>
+    /* Main background */
+    .stApp {
+        background-color: #121212;
+    }
+    
+    /* Secondary background */
+    .stSidebar, .stTextInput, .stTextArea, .stSelectbox, .stDataFrame {
+        background-color: #1E1E1E !important;
+    }
+    
+    /* Text color */
+    body, p, .stMarkdown, .stSelectbox, .stTextInput, .stTextArea {
+        color: #E0E0E0 !important;
+    }
+    
+    /* Accent colors */
+    .stButton>button, .stDownloadButton>button {
+        background-color: #1A73E8 !important;
+        color: white !important;
+    }
+    
+    /* Borders and dividers */
+    .stSidebar, .stTextInput, .stTextArea, .stSelectbox {
+        border-color: #333333 !important;
+    }
+    
+    /* Error states */
+    .stAlert {
+        background-color: #EA4335 !important;
+        color: white !important;
+    }
+    
+    /* Interactive elements */
+    .stSelectbox:hover, .stTextInput:hover, .stTextArea:hover {
+        border-color: #1A73E8 !important;
+    }
+    
+    /* Dataframe styling */
+    .dataframe {
+        color: #E0E0E0 !important;
+    }
+    .dataframe th {
+        background-color: #1A73E8 !important;
+        color: white !important;
+    }
+    .dataframe td {
+        background-color: #222222 !important;
+    }
+    
+    /* Code blocks */
+    .stCodeBlock {
+        background-color: #1E1E1E !important;
+        color: #E0E0E0 !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 # Sidebar for navigation
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Database Information", "Database Explorer", "SQL Query Chatbot"])

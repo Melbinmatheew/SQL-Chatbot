@@ -2,4 +2,4 @@ streamlit
 google-generativeai
 python-dotenv
 graphviz
-sqlite3
+db-sqlite3
