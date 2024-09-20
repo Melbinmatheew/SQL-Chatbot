@@ -267,7 +267,7 @@ The SQL database has the following schema:
 """
 
 # Streamlit app layout
-st.set_page_config(page_title="Chinook Database Explorer & Chatbot", layout="wide")
+st.set_page_config(page_title="Database Explorer Chatbot", layout="wide")
 
 # Custom CSS for dark theme
 st.markdown("""
